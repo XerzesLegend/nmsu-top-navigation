@@ -1,0 +1,39 @@
+#menu{
+    display: flex;
+    background-color: #f8f8f8;
+}
+
+#menu li{
+    display: inline-block;
+    flex: 1;
+    text-align: left;
+    padding: 16px;
+}
+#menu li ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    z-index: 1000;
+}
+#menu li a{
+    color: #882345;
+    font-weight: 800;
+    text-decoration: none;
+}
+#menu li a:hover{
+    color: white;
+    background-color: #882345;
+}
+
+#menu li ul li{
+    list-style-type: none;
+}
+
+
+.items-hide{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
