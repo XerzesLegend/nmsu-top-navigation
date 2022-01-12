@@ -3,29 +3,25 @@ addDropDownFunctionality();
 
 
 
-
-
-
-
 function addDropDownFunctionality(){
     const menu = document.querySelector('#menu');
-    let uls = menu.querySelectorAll('ul');
-    uls = Array.from(uls);
+    let btns = menu.querySelectorAll('a');
+    let menus = menu.querySelectorAll('div');
+    btns = Array.from(btns);
+    menus = Array.from(menus);
 
-    uls.forEach(ul => {
-        const ulID = ul.id;
-        const btnID = '#' + ul.id + "Btn";
-        const btn = document.querySelector(btnID);
-        
+    btns.forEach(btn => {
+        let index = btns.indexOf(btn);
         btn.addEventListener('click', function(e){
-            uls.forEach(ul => {
-                if(ul.id == ulID){
-                    return
-                }
+            btns.forEach(btn =>{
+                let temp = btns.indexOf(btn);
+                if(index == temp){
+                    return}
                 else{
-                    ul.classList.add('items-hide')}
-                });
-            ul.classList.toggle('items-hide');
+                    menus[temp].classList.add('items-hide');
+                }
+            });
+            menus[index].classList.toggle('items-hide');
         });
     });
 
