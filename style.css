@@ -42,7 +42,7 @@
     border: inset #882345;
     border-top: thin #f8f8f8;
     left: 0;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .items-hide{
@@ -57,11 +57,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20%;
     text-align: center;
-    height: 180px;
+    height: 200px;
 }
 .containerTopNav div{
     flex: 1;
 }
-
