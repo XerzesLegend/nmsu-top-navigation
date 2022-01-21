@@ -6,7 +6,7 @@ addDropDownFunctionality();
 function addDropDownFunctionality(){
     const menu = document.querySelector('#menu');
     let btns = menu.querySelectorAll('a');
-    let menus = menu.querySelectorAll('div.menu');
+    let menus = document.querySelectorAll('div.menu');
     btns = Array.from(btns);
     menus = Array.from(menus);
 
