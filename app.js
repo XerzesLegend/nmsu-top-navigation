@@ -23,7 +23,19 @@ function addDropDownFunctionality(){
             });
             menus[index].classList.toggle('items-hide');
         });
+        window.addEventListener('click', function(e){   
+            if (document.getElementById('maincontainer').contains(e.target)){
+              // Clicked in box
+            } else{
+              menus.forEach(men => {
+                men.classList.add('items-hide');
+              });
+            }
+          });
     });
 
 }
 
+function closeDropDown(){
+
+}

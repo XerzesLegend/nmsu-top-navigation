@@ -51,6 +51,7 @@
     border: thin #f8f8f8;
     visibility: hidden;
     overflow: hidden;
+    opacity: 0;
 }
 
 .containerTopNav{
