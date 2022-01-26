@@ -1,6 +1,5 @@
 addDropDownFunctionality();
-
-
+navBarButton();
 
 
 function addDropDownFunctionality(){
@@ -13,6 +12,7 @@ function addDropDownFunctionality(){
     btns.forEach(btn => {
         let index = btns.indexOf(btn);
         btn.addEventListener('click', function(e){
+            e.preventDefault();
             btns.forEach(btn =>{
                 let temp = btns.indexOf(btn);
                 if(index == temp){
@@ -36,6 +36,12 @@ function addDropDownFunctionality(){
 
 }
 
-function closeDropDown(){
-
-}
+function navBarButton(){
+    const container = document.querySelector('.mainContainer');
+    const parentContainer = document.querySelector('#maincontainer');
+    const button = document.querySelector('button.navbar-toggle');
+    button.addEventListener('click', function(){
+        container.classList.toggle('containerHide');
+        parentContainer.classList.toggle('containerHide');
+    });
+};
