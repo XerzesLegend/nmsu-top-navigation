@@ -1,7 +1,7 @@
 addDropDownFunctionality();
 navBarButton();
 goBackButton();
-
+mobileArrowText();
 
 function addDropDownFunctionality(){
     const main = document.querySelector('.mainContainer');
@@ -65,3 +65,13 @@ function goBackButton(){
     
 };
 
+function mobileArrowText(){
+    let arrowContainers = document.querySelectorAll('span.arrow');
+    const menu = document.querySelector('#menu');
+    let text = menu.querySelectorAll('a');
+    arrowContainers = Array.from(arrowContainers);
+    text = Array.from(text);
+    for(i=0; i<arrowContainers.length; i++){
+        arrowContainers[i].textContent = arrowContainers[i].textContent + " " + text[i].textContent;
+    }
+};
