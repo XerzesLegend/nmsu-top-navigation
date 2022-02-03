@@ -2,6 +2,7 @@ addDropDownFunctionality();
 navBarButton();
 goBackButton();
 mobileArrowText();
+removeEventListenersForClickableMenus();
 
 function addDropDownFunctionality(){
     const main = document.querySelector('.mainContainer');
@@ -74,4 +75,15 @@ function mobileArrowText(){
     for(i=0; i<arrowContainers.length; i++){
         arrowContainers[i].textContent = arrowContainers[i].textContent + " " + text[i].textContent;
     }
+};
+
+function removeEventListenersForClickableMenus(){
+    const menu = document.querySelector('#menu');
+    let btns = menu.querySelectorAll('a');
+    btns = Array.from(btns);
+    btns.forEach(btn =>{
+        if(btn.classList.contains('clickable')){
+            btn.replaceWith(btn.cloneNode(true));
+        };
+    });
 };
